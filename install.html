@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Install Abiel</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f0f10">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Abiel">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="index.html">Abiel</a></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="archive.html">Archive</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Install Abiel</h1>
+      <p>This is a lightweight app you can add to your home screen.</p>
+
+      <h2>iPhone / iPad (Safari)</h2>
+      <ol>
+        <li>Open this site in <strong>Safari</strong></li>
+        <li>Tap <strong>Share</strong> (square with arrow)</li>
+        <li>Tap <strong>Add to Home Screen</strong></li>
+      </ol>
+
+      <h2>Android (Chrome)</h2>
+      <ol>
+        <li>Open this site in <strong>Chrome</strong></li>
+        <li>Tap the menu ⋮</li>
+        <li>Tap <strong>Install app</strong> (or <strong>Add to Home screen</strong>)</li>
+      </ol>
+
+      <p id="androidHint" style="display:none;">
+        Tip: If you see an install icon in the address bar, tap it.
+      </p>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Abiel
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Simple hint for Android-like browsers
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    if (isAndroid) document.getElementById("androidHint").style.display = "block";
+  </script>
+</body>
+</html>
