@@ -108,4 +108,12 @@ footer{
   color:var(--muted);
   font-size: 14px;
 }
+.hero-img{
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+  margin: 22px 0;
+}
+.hero-img.tight{ margin: 16px 0; }
 
