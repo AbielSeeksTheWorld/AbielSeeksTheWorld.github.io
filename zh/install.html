@@ -4,15 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>安装 Abiel</title>
-  <link rel="stylesheet" href="style.css">
 
-  <link rel="manifest" href="manifest.webmanifest">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="../manifest.webmanifest">
   <meta name="theme-color" content="#0f0f10">
 
+  <!-- iOS Add to Home Screen -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Abiel">
-  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/icon-192.png">
 </head>
 <body>
   <div class="wrap">
@@ -21,6 +25,10 @@
       <nav>
         <a href="index.html">首页</a>
         <a href="archive.html">存档</a>
+        <a href="install.html">安装应用</a>
+        <a href="../index.html">EN</a>
+        <a href="../de/index.html">DE</a>
+        <a href="../ro/index.html">RO</a>
       </nav>
     </header>
 
@@ -30,20 +38,20 @@
 
       <h2>iPhone / iPad（Safari）</h2>
       <ol>
-        <li>使用 <strong>Safari</strong> 打开此网站</li>
-        <li>点击 <strong>分享</strong>（带箭头的方形图标）</li>
+        <li>使用 <strong>Safari</strong> 打开此页面</li>
+        <li>点击 <strong>分享</strong>（方形加箭头图标）</li>
         <li>点击 <strong>添加到主屏幕</strong></li>
       </ol>
 
       <h2>Android（Chrome）</h2>
       <ol>
-        <li>使用 <strong>Chrome</strong> 打开此网站</li>
+        <li>使用 <strong>Chrome</strong> 打开此页面</li>
         <li>点击菜单 ⋮</li>
         <li>点击 <strong>安装应用</strong>（或 <strong>添加到主屏幕</strong>）</li>
       </ol>
 
-      <p id="androidHint" style="display:none;">
-        提示：如果在地址栏中看到安装图标，点击即可。
+      <p id="androidHint" class="note" style="display:none;">
+        提示：如果地址栏中出现安装图标，点击即可。
       </p>
     </main>
 
@@ -55,13 +63,13 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // 为 Android 类浏览器显示简单提示
     const isAndroid = /Android/i.test(navigator.userAgent);
-    if (isAndroid) document.getElementById("androidHint").style.display = "block";
+    if (isAndroid) {
+      document.getElementById("androidHint").style.display = "block";
+    }
   </script>
 </body>
 </html>
-
 
 
 
