@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abiel installieren</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f0f10">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Abiel">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="index.html">Abiel</a></div>
+      <nav>
+        <a href="index.html">Start</a>
+        <a href="archive.html">Archiv</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Abiel installieren</h1>
+      <p>Dies ist eine schlanke App, die du deinem Startbildschirm hinzufügen kannst.</p>
+
+      <h2>iPhone / iPad (Safari)</h2>
+      <ol>
+        <li>Öffne diese Seite in <strong>Safari</strong></li>
+        <li>Tippe auf <strong>Teilen</strong> (Quadrat mit Pfeil)</li>
+        <li>Tippe auf <strong>Zum Home-Bildschirm</strong></li>
+      </ol>
+
+      <h2>Android (Chrome)</h2>
+      <ol>
+        <li>Öffne diese Seite in <strong>Chrome</strong></li>
+        <li>Tippe auf das Menü ⋮</li>
+        <li>Tippe auf <strong>App installieren</strong> (oder <strong>Zum Startbildschirm hinzufügen</strong>)</li>
+      </ol>
+
+      <p id="androidHint" style="display:none;">
+        Tipp: Wenn in der Adressleiste ein Installationssymbol erscheint, tippe darauf.
+      </p>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Abiel
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Einfacher Hinweis für Android-ähnliche Browser
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    if (isAndroid) document.getElementById("androidHint").style.display = "block";
+  </script>
+</body>
+</html>
