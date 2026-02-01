@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abiel installieren</title>
-  <link rel="stylesheet" href="style.css">
 
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="manifest" href="../manifest.webmanifest">
   <meta name="theme-color" content="#0f0f10">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Abiel">
-  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/icon-192.png">
 </head>
 <body>
   <div class="wrap">
@@ -21,6 +22,10 @@
       <nav>
         <a href="index.html">Start</a>
         <a href="archive.html">Archiv</a>
+        <a href="install.html">App installieren</a>
+        <a href="../index.html">EN</a>
+        <a href="../ro/index.html">RO</a>
+        <a href="../zh/index.html">ZH</a>
       </nav>
     </header>
 
@@ -42,7 +47,7 @@
         <li>Tippe auf <strong>App installieren</strong> (oder <strong>Zum Startbildschirm hinzufügen</strong>)</li>
       </ol>
 
-      <p id="androidHint" style="display:none;">
+      <p id="androidHint" class="note" style="display:none;">
         Tipp: Wenn in der Adressleiste ein Installationssymbol erscheint, tippe darauf.
       </p>
     </main>
@@ -55,9 +60,9 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Einfacher Hinweis für Android-ähnliche Browser
     const isAndroid = /Android/i.test(navigator.userAgent);
     if (isAndroid) document.getElementById("androidHint").style.display = "block";
   </script>
 </body>
 </html>
+
