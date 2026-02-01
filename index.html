@@ -4,14 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abiel</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <!-- iOS Add to Home Screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="format-detection" content="telephone=no">
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><a href="/">Abiel</a></div>
+      <div class="brand"><a href="index.html">Abiel</a></div>
       <nav>
-        <a href="/">Home</a>
+        <a href="index.html">Home</a>
         <a href="archive.html">Archive</a>
       </nav>
     </header>
@@ -160,6 +172,11 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // PWA: register service worker (safe for GitHub Pages + installed PWA)
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js");
+    }
   </script>
 </body>
 </html>
