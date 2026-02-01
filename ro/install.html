@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instalează Abiel</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0f0f10">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Abiel">
+  <link rel="apple-touch-icon" href="../assets/icon-192.png">
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="index.html">Abiel</a></div>
+      <nav>
+        <a href="index.html">Acasă</a>
+        <a href="archive.html">Arhivă</a>
+        <a href="../index.html">EN</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Instalează Abiel</h1>
+      <p>Abiel este o aplicație ușoară pe care o poți adăuga pe ecranul principal.</p>
+
+      <h2>iPhone / iPad (Safari)</h2>
+      <ol>
+        <li>Deschide acest site în <strong>Safari</strong></li>
+        <li>Apasă <strong>Partajează</strong> (pătratul cu săgeata în sus)</li>
+        <li>Apasă <strong>Adaugă pe ecranul principal</strong></li>
+      </ol>
+
+      <h2>Android (Chrome)</h2>
+      <ol>
+        <li>Deschide acest site în <strong>Chrome</strong></li>
+        <li>Apasă meniul ⋮</li>
+        <li>Apasă <strong>Instalează aplicația</strong> (sau <strong>Adaugă pe ecranul principal</strong>)</li>
+      </ol>
+
+      <p id="androidHint" style="display:none;">
+        Sfat: dacă vezi o iconiță de instalare în bara de adrese, apasă pe ea.
+      </p>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Abiel
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Indiciu simplu pentru browsere Android
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    if (isAndroid) document.getElementById("androidHint").style.display = "block";
+  </script>
+</body>
+</html>
